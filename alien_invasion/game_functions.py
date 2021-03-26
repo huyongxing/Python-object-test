@@ -180,8 +180,8 @@ def check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets):
 def update_aliens(ai_settings, stats, screen, ship, aliens, bullets):
     """检查是否有外星人位于屏幕边缘，并更新外星人群的位置"""
     check_fleet_edges(ai_settings, aliens)
-    aliens.update()
     check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets)
+    aliens.update()
 
     if pygame.sprite.spritecollideany(ship, aliens):
         ship_hit(ai_settings, stats, screen, ship, aliens, bullets)
